@@ -1,0 +1,29 @@
+name: Expand HSI practical files
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "HSI_Filter_Practical.zip"
+      - ".github/workflows/expand-project.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  expand-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Extract project files
+        run: |
+          unzip -o HSI_Filter_Practical.zip -d .
+          rm -f HSI_Filter_Practical.zip
+      - name: Commit individual project files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add HSI_Filter_Practical
+          git commit -m "Add HSI filter practical source, input and output files" || echo "No changes to commit"
+          git push
