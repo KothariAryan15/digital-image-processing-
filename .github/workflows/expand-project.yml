@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Extract project files
         run: |
-          unzip -o HSI_Filter_Practical.zip -d .
+          mkdir -p HSI_Filter_Practical
+          unzip -o HSI_Filter_Practical.zip -d HSI_Filter_Practical
           rm -f HSI_Filter_Practical.zip
       - name: Commit individual project files
         run: |
