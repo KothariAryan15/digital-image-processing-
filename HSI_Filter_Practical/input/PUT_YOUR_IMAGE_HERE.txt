@@ -1,0 +1,1 @@
+Copy your birds image into this folder and rename it input.jpg. The script reads input/input.jpg.
