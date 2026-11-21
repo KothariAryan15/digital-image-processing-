@@ -6,6 +6,7 @@ on:
     paths:
       - "HSI_Filter_Practical.zip"
       - ".github/workflows/expand-project.yml"
+      - "README.md"
 
 permissions:
   contents: write
