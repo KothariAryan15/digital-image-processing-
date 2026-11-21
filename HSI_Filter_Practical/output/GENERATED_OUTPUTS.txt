@@ -1,0 +1,1 @@
+Run hsi_filters.py to generate original.png and the six filter result PNG files in this folder.
